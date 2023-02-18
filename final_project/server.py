@@ -3,17 +3,17 @@ from flask import Flask, render_template, request
 
 app = Flask("Web Translator")
 
-@app.route("/englishToFrench")
-def englishToFrench():
+@app.route("/english_to_french")
+def english_to_french():
     textToTranslate = request.args.get('textToTranslate')
-    frenchText = translator.englishToFrench(textToTranslate)    
-    return frenchText
+    french_text = translator.english_to_french(textToTranslate)    
+    return french_text
 
-@app.route("/frenchToEnglish")
-def frenchToEnglish():
+@app.route("/french_to_english")
+def french_to_english():
     textToTranslate = request.args.get('textToTranslate')
-    englishText = translator.frenchToEnglish(textToTranslate)    
-    return englishText
+    english_text = translator.french_to_english(textToTranslate)    
+    return english_text
 
 @app.route("/")
 def renderIndexPage():

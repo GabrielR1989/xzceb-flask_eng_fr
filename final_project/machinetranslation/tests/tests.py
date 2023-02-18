@@ -5,30 +5,30 @@ Name: Gabriel Ricardo Erazo
 '''
 import unittest
 
-from translator import englishToFrench, frenchToEnglish
+from translator import english_to_french, french_to_english
 
-class TestEnglishToFrench(unittest.TestCase):
+class Testenglish_to_french(unittest.TestCase):
     '''
     Test for null input and for the translation of the word 
-    ‘Hello’ and ‘Bonjour’ for englishToFrench
+    ‘Hello’ and ‘Bonjour’ for english_to_french
     '''
     def test1(self):
-        self.assertEqual(englishToFrench('Hello'),'Bonjour') #Test correct translation
-        #self.assertEqual(englishToFrench(''),'') #Test for null input   
-        self.assertNotEqual(englishToFrench('Hello'), 'Hello')
-        self.assertNotEqual(englishToFrench("None"), '')
-        self.assertNotEqual(englishToFrench(0),0)
+        self.assertEqual(english_to_french('Hello'),'Bonjour') #Test correct translation
+        #self.assertEqual(english_to_french(''),'') #Test for null input   
+        self.assertNotEqual(english_to_french('Hello'), 'Hello')
+        self.assertNotEqual(english_to_french("None"), '')
+        self.assertNotEqual(english_to_french(0),0)
 
-class TestFrenchToEnglish(unittest.TestCase):
+class Testfrench_to_english(unittest.TestCase):
     '''
     Test for null input and for the translation of the word 
-    ‘Bonjour’ and ‘Hello for frenchToEnglish
+    ‘Bonjour’ and ‘Hello for french_to_english
     '''
     def test1(self):
-        self.assertEqual(frenchToEnglish('Bonjour'),'Hello') #Test correct translation
-        #self.assertEqual(frenchToEnglish(''),'') #Test for null input
-        self.assertNotEqual(frenchToEnglish('Bonjour'), 'Bonjour')
-        self.assertNotEqual(frenchToEnglish("None"), '')
-        self.assertNotEqual(frenchToEnglish(0),0)
+        self.assertEqual(french_to_english('Bonjour'),'Hello') #Test correct translation
+        #self.assertEqual(french_to_english(''),'') #Test for null input
+        self.assertNotEqual(french_to_english('Bonjour'), 'Bonjour')
+        self.assertNotEqual(french_to_english("None"), '')
+        self.assertNotEqual(french_to_english(0),0)
 
 unittest.main()
